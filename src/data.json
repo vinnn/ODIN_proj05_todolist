@@ -1,0 +1,10 @@
+{
+    "projects" : ["homework", "shopping", "holiday", "gardening"],
+    "items" : [
+            [1, "maths", "finish exercise 3", "3-Feb-2023", "1", "false"],
+            [3, "clothes", "Return amazon", "21-Mar-2022", "1", "false"],
+            [3, "groceries", "buy leaks", "22-Mar-2022", "2", "false"],
+            [3, "groceries", "check receipt", "23-Mar-2022", "2", "false"],
+            [5, "lawn", "mawing", "3-Apr-2022", "1", "false"]
+    ]
+}
