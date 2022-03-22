@@ -1,7 +1,8 @@
 
 export class Project {
-    constructor(name) {
+    constructor(name, items_array) {
         this.name = name;
+        this.items = items_array;
     }
     
     getName() {
@@ -13,8 +14,7 @@ export class Project {
 
 
 export class Item {
-    constructor(project, name, description, dueDate, priority, done) {
-        this.project = project;
+    constructor(name, description, dueDate, priority, done) {
         this.name = name;
         this.description = description;
         this.dueDate = dueDate;

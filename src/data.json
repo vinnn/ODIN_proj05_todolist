@@ -1,10 +1,31 @@
 {
-    "projects" : ["homework", "shopping", "holiday", "gardening"],
-    "items" : [
-            [1, "maths", "finish exercise 3", "3-Feb-2023", "1", "false"],
-            [3, "clothes", "Return amazon", "21-Mar-2022", "1", "false"],
-            [3, "groceries", "buy leaks", "22-Mar-2022", "2", "false"],
-            [3, "groceries", "check receipt", "23-Mar-2022", "2", "false"],
-            [5, "lawn", "mawing", "3-Apr-2022", "1", "false"]
-    ]
+    "projects" : 
+        {"homework": 
+            [
+                ["maths", "finish exercise 3", "3-Feb-2023", "2", false],
+                ["maths", "complete circles", "5-Feb-2023", "2", false]
+            ],
+        "shopping": 
+            [
+                ["clothes", "Return amazon", "21-Mar-2022", "1", false],
+                ["groceries and all the things to buy and return before the right date but not after", "buy leeks", "22-Mar-2022", "2", false],
+                ["groceries", "check receipt", "23-Mar-2022", "2", false]
+            ],
+        "holiday": 
+            [
+                ["ski", "book flights", "18-Mar-2022", "1", false],
+                ["ski clothes", "returns", "22-Mar-2022", "1", false]
+            ],
+        "gardening": 
+            [
+                ["lawn", "mawing", "3-Apr-2022", "1", false],
+                ["lawn", "mawing", "3-May-2022", "2", false],
+                ["lawn", "mawing", "3-Jun-2022", "3", false]
+            ]
+        }
 }
+
+
+
+
+

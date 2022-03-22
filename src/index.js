@@ -1,6 +1,6 @@
 // import Data from './data.json';
 // import { Project, Item } from './classes.js';
-import { loadProjects, loadItems } from './loadData.js';
+import { loadData } from './loadData.js';
 import { displayProjects } from './displayData.js';
 
 
@@ -10,11 +10,9 @@ import { displayProjects } from './displayData.js';
 // LOAD DATA
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-const projects = loadProjects();
-const items = loadItems();
+const projects = loadData();
 
 console.log(projects);
-console.log(items);
 
 
 displayProjects();
