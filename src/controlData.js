@@ -1,15 +1,29 @@
-import Data from './data.json';
+import jsonData from './data.json';
 import { Project, Item } from './classes.js';
 
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// LOAD PROJECTS
+// LOAD PROJECTS  FROM JSON FILE  TO  LOCAL STORAGE
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-export function loadData() {
+export function loadInitialProjects_to_localStorage() {
 
-    const input_dict = Data["projects"];
+    localStorage.clear(); //clean the localstorage
+    const input_dict = jsonData["projects"];
+    localStorage.setItem("projects", JSON.stringify(input_dict));
+}
+
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// LOAD PROJECTS  INTO LOCAL STORAGE
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+export function loadProjects_from_localStorage() {
+
+    const input_stringified = localStorage.getItem("projects");
+    const input_dict = JSON.parse(input_stringified);
 
     const projects = [];
 
@@ -20,7 +34,7 @@ export function loadData() {
         // load project items
         let input_items = input_dict[key];
         let project_items = [];
-        console.log(input_items)
+
         for (let ii=0; ii < input_items.length; ii++) {
             let iName = input_items[ii][0];
             let iDesc = input_items[ii][1];
@@ -37,34 +51,5 @@ export function loadData() {
     }
     return projects;
 }
-
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// LOAD ITEMS
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// export function loadItems() {
-
-//     const data_array = Data["items"];
-
-//     const items = [];
-//     for (let key in data_array) {
-
-//         let itemArray = data_array[key];
-
-//         let iProject = itemArray[0];
-//         let iName = itemArray[1];
-//         let iDesc = itemArray[2];
-//         let iDueDate = itemArray[3];
-//         let iPriority = itemArray[4];
-//         let iDone = itemArray[5];
-
-//         let newItem = new Item(iProject,iName,iDesc,iDueDate,iPriority,iDone);
-//         items.push(newItem);
-//     }
-//     return items;
-// }
-
-
 
 
