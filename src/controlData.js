@@ -53,3 +53,43 @@ export function loadProjects_from_localStorage() {
 }
 
 
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// UPDATE PROJECTS  IN LOCAL STORAGE
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+export function updateProjects_in_localStorage(projects) {
+
+    let projects_dict = {};
+
+    for (let ip=0; ip<projects.length; ip++) {
+
+        let project = projects[ip];
+
+        let items_list = [];
+        for (let ii=0; ii<project.items.length; ii++) {
+
+            let item = project.items[ii];
+
+            let item_list = [];
+            item_list.push(item.name);
+            item_list.push(item.description);
+            item_list.push(item.dueDate);
+            item_list.push(item.priority);
+            item_list.push(item.done);
+
+            items_list.push(item_list);
+        }
+
+        projects_dict[project.name] = items_list;
+    }
+
+    // console.log(projects_dict);
+    
+
+    localStorage.clear(); //clean the localstorage
+    localStorage.setItem("projects", JSON.stringify(projects_dict));
+
+
+
+}

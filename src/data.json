@@ -7,7 +7,7 @@
             ],
         "shopping": 
             [
-                ["clothes", "Return amazon", "21-Mar-2022", "1", false],
+                ["clothes", "Return amazon", "21-Mar-2022", "1", true],
                 ["groceries and all the things to buy and return before the right date but not after", "buy leeks", "22-Mar-2022", "2", false],
                 ["groceries", "check receipt", "23-Mar-2022", "2", false]
             ],
