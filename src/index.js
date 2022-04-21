@@ -3,12 +3,12 @@ import { listenBtns } from './helpers_listen.js';
 import { displayProject } from './displayProject.js';
 import { checkItemDone } from './updateItem.js';
 import { loadInitialProjects_to_localStorage } from './controlData.js';
+import { displayHeader } from './displayHeader.js';
 
 
 
 
-
-// INITLIALISATION AND MAIN MODULE
+// INITIALISATION AND MAIN MODULE
 // - load data from json  into local storage
 // - read local storage and displayOverview 
 //      - overview event listeners
@@ -60,20 +60,20 @@ import { loadInitialProjects_to_localStorage } from './controlData.js';
     
 
 
-function loadOverview() {
+export function loadOverview() {
 
 
     displayOverview();
 
     listenBtns(
         "btn-project.select", // class of buttons to be listened to
-        ["projectId"],        // button attribute to identify the button clicked 
+        ["projectId"],        // button attribute name to identify the button clicked 
         loadProject   // function to be triggered when button clicked
         );
 
     // listenBtns(
     //     "btn-project.delete", // class of buttons to be listened to
-    //     "data",        // button attribute to identify the button clicked 
+    //     ["projectId"],        // button attribute name to identify the button clicked 
     //     deleteProject   // function to be triggered when button clicked
     //     );
 
@@ -109,5 +109,7 @@ function loadProject(args) {
 
 
 loadInitialProjects_to_localStorage();
+
+displayHeader();
 
 loadOverview();

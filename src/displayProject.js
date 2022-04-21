@@ -1,7 +1,7 @@
 import { loadProjects_from_localStorage } from './controlData.js';
 import { createDiv, createBtn, createChkb, clear_container_content } from './helpers_display.js';
 import { listenBtns } from './helpers_listen.js';
-import { checkItemDone } from './updateItem.js';
+import { checkItemDone, deleteItem, editItem } from './updateItem.js';
 
 
 export function displayProject(projectId) {
@@ -42,10 +42,10 @@ export function displayProject(projectId) {
         createBtn("", ["btn-project", "delete"], [["projectId", projectId]], "DELETE PROJECT", div_projectHead);
 
     // items 
-    const div_items = createDiv("", ["div-items"], [[]], "", div_project);
+    const div_items = createDiv("div-items", ["div-items"], [[]], "", div_project);
 
 
-        // items header
+        // items headers
         const div_itemsHead = createDiv("", ["div-item", "head"], [[]], "", div_items);
 
             // header item name
@@ -91,13 +91,25 @@ export function displayProject(projectId) {
 
 
 
+
+
     listenBtns(
         "btn-item.done", // class of buttons to be listened to
         ["projectId", "itemId"],        // button attribute to identify the button clicked 
         checkItemDone   // function to be triggered when button clicked
     );
 
+    listenBtns(
+        "btn-item.edit", // class of buttons to be listened to
+        ["projectId", "itemId"],        // button attribute to identify the button clicked 
+        editItem   // function to be triggered when button clicked
+    );
 
+    listenBtns(
+        "btn-item.delete", // class of buttons to be listened to
+        ["projectId", "itemId"],        // button attribute to identify the button clicked 
+        deleteItem   // function to be triggered when button clicked
+    );
 
 
 

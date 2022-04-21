@@ -107,6 +107,46 @@ export function createChkb(id, classes, attributes, checked, container) {
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// creates an HTML input element
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+export function createInput(id, classes, attributes, placeholder, prefillvalue, container) {
+
+    const newElt = document.createElement("input");
+    // newElt.setAttribute("type", "");
+
+    // add an ID %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if (id != "") {newElt.id = id}
+    
+    // add classes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    for (let ii=0; ii<classes.length; ii++) {
+        newElt.classList.add(classes[ii]);
+    }
+    
+    // add attributes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if (attributes[0].length > 0) {
+        for (let ii=0; ii<attributes.length; ii++) {
+            newElt.setAttribute(attributes[ii][0], attributes[ii][1]);
+        }   
+    }
+
+    // placeholder %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    newElt.placeholder = placeholder;
+
+    // prefill value %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    newElt.value = prefillvalue;
+
+
+    // append to parent %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+    container.appendChild(newElt);
+
+    return newElt;
+}
+
+
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // clears all children of the container element
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
