@@ -11,16 +11,9 @@ export function displayProject(projectId) {
     // LOAD DATA
     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     const projects = loadProjects_from_localStorage();
-    // const arr_project = projects.filter(project => project.name == projectName);
-    // const project = arr_project[0];
-    // console.log(projectId);
+
     const project = projects[projectId];
     const items = project.items;
-
-    // console.log(projectId);
-    // console.log(projects);
-    // console.log(project);
-    // console.log(items);
 
     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     // PAGE CONTENT CONTAINER
@@ -85,11 +78,7 @@ export function displayProject(projectId) {
 
             createBtn("", ["btn-item", "delete"], [["projectId", projectId], ["itemId", ii]], "delete", div_itemRow);
 
-
-
         }
-
-
 
 
 
@@ -112,15 +101,11 @@ export function displayProject(projectId) {
         deleteItem   // function to be triggered when button clicked
     );
 
-
-
-
     listenBtns(
         "btn-project.add-item", // class of buttons to be listened to
         ["projectId"],        // button attribute to identify the button clicked 
         addItem   // function to be triggered when button clicked
     );
-
 
     listenBtns(
         "btn-project.delete", // class of buttons to be listened to

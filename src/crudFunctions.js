@@ -2,7 +2,7 @@ import { loadProjects_from_localStorage, updateProjects_in_localStorage } from '
 import { displayProject } from './displayProject.js';
 import { createDiv, createBtn, createInput } from './helpers_display.js';
 import { Project, Item } from './classes.js';
-import { loadOverview } from './index.js';
+import { displayOverview } from './displayOverview.js';
 
 
 export function checkItemDone(args) {
@@ -19,10 +19,7 @@ export function checkItemDone(args) {
 
     updateProjects_in_localStorage(projects);
     displayProject(projectId);
-
 }
-
-
 
 
 export function deleteItem(args) {
@@ -43,7 +40,6 @@ export function deleteItem(args) {
 }
 
 
-
 export function editItem(args) {
 
     const projects = loadProjects_from_localStorage();
@@ -59,7 +55,6 @@ export function editItem(args) {
     // hidden popup form (to edit items when needed)
     const div_popup = createDiv("div-popup", ["div-popup"], [[]], "EDIT ITEM " + item.name, div_items);
 
-
         const div_name = createDiv("div-name", [], [[]], "name        ", div_popup);
         const input_name = createInput("input-name", ["input-popup", "name"], [[]], "", item.name, div_name);
    
@@ -71,8 +66,6 @@ export function editItem(args) {
 
         const div_priority = createDiv("div-priority", [], [[]], "priority    ", div_popup);
         const input_priority = createInput("input-priority", ["input-popup", "priority"], [[]], "", item.priority, div_priority);
-
-    // document.getElementById('Input').readOnly = true;
 
         const btn_submit = createBtn("btn-submit", ["btn-submit"], [["projectId", projectId], ["itemId", itemId]], "apply changes", div_popup);
         const btn_cancel = createBtn("btn-cancel", ["btn-cancel"], [[]], "cancel", div_popup);
@@ -92,7 +85,6 @@ export function editItem(args) {
 
             displayProject(projectId);
         }
-
 }
 
 
@@ -109,7 +101,6 @@ export function addItem(args) {
 
     // hidden popup form (to edit items when needed)
     const div_popup = createDiv("div-popup", ["div-popup"], [[]], "NEW ITEM ", div_items);
-
 
         const div_name = createDiv("div-name", [], [[]], "name        ", div_popup);
         const input_name = createInput("input-name", ["input-popup", "name"], [[]], "name", "", div_name);
@@ -144,11 +135,7 @@ export function addItem(args) {
         btn_cancel.onclick = (e) => {
             displayProject(projectId);
         }
-
 }
-
-
-
 
 
 export function deleteProject(args) {
@@ -160,27 +147,21 @@ export function deleteProject(args) {
     projects.splice(projectId, 1);
 
     updateProjects_in_localStorage(projects);
-    loadOverview();
-
+    displayOverview();
 }
-
-
 
 
 export function newProject() {
 
     const projects = loadProjects_from_localStorage();
 
-
     const div_content = document.getElementById("content");
 
     // hidden popup form (to edit items when needed)
     const div_popup = createDiv("div-popup", ["div-popup"], [[]], "NEW PROJECT ", div_content);
 
-
         const div_name = createDiv("div-name", [], [[]], "name        ", div_popup);
         const input_name = createInput("input-name", ["input-popup", "name"], [[]], "", "new project name", div_name);
-
 
         const btn_submit = createBtn("btn-submit", ["btn-submit"], [[], [[]]], "create new project", div_popup);
         const btn_cancel = createBtn("btn-cancel", ["btn-cancel"], [[]], "cancel", div_popup);
@@ -193,12 +174,11 @@ export function newProject() {
             projects.push(newProject);
 
             updateProjects_in_localStorage(projects);
-            loadOverview();
+            displayOverview();
         }
 
         btn_cancel.onclick = (e) => {
 
-            loadOverview();
+            displayOverview();
         }
-
 }

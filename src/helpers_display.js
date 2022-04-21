@@ -1,5 +1,4 @@
 
-
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // creates an HTML div element
@@ -68,7 +67,6 @@ export function createBtn(id, classes, attributes, text, container) {
 }
 
 
-
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // creates an HTML input element
@@ -135,7 +133,6 @@ export function createInput(id, classes, attributes, placeholder, prefillvalue, 
 
     // prefill value %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
     newElt.value = prefillvalue;
-
 
     // append to parent %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
     container.appendChild(newElt);

@@ -84,12 +84,7 @@ export function updateProjects_in_localStorage(projects) {
         projects_dict[project.name] = items_list;
     }
 
-    // console.log(projects_dict);
-    
-
     localStorage.clear(); //clean the localstorage
     localStorage.setItem("projects", JSON.stringify(projects_dict));
-
-
 
 }
