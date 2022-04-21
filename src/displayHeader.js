@@ -1,6 +1,7 @@
 import { createDiv, createBtn } from './helpers_display.js';
 import { listenBtns } from './helpers_listen.js';
 import { loadOverview } from './index.js';
+import { newProject } from './crudFunctions.js';
 
 
 export function displayHeader() {
@@ -24,5 +25,16 @@ export function displayHeader() {
         [],        // button attribute to identify the button clicked 
         loadOverview   // function to be triggered when button clicked
     );
+
+    // button create new project
+    createBtn("", ["btn-new-project"], [[]], "CREATE NEW PROJECT", cont_header);
+
+
+    listenBtns(
+        "btn-new-project", // class of buttons to be listened to
+        [],        // button attribute to identify the button clicked 
+        newProject   // function to be triggered when button clicked
+    );
+
 
 }

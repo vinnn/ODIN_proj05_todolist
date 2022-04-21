@@ -1,10 +1,10 @@
 import { displayOverview } from './displayOverview.js';
 import { listenBtns } from './helpers_listen.js';
 import { displayProject } from './displayProject.js';
-import { checkItemDone } from './updateItem.js';
+import { checkItemDone } from './crudFunctions.js';
 import { loadInitialProjects_to_localStorage } from './controlData.js';
 import { displayHeader } from './displayHeader.js';
-
+import { deleteProject } from './crudFunctions.js';
 
 
 
@@ -71,11 +71,11 @@ export function loadOverview() {
         loadProject   // function to be triggered when button clicked
         );
 
-    // listenBtns(
-    //     "btn-project.delete", // class of buttons to be listened to
-    //     ["projectId"],        // button attribute name to identify the button clicked 
-    //     deleteProject   // function to be triggered when button clicked
-    //     );
+    listenBtns(
+        "btn-project.delete", // class of buttons to be listened to
+        ["projectId"],        // button attribute name to identify the button clicked 
+        deleteProject   // function to be triggered when button clicked
+        );
 
 }
 

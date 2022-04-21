@@ -1,7 +1,8 @@
 import { loadProjects_from_localStorage } from './controlData.js';
 import { createDiv, createBtn, createChkb, clear_container_content } from './helpers_display.js';
 import { listenBtns } from './helpers_listen.js';
-import { checkItemDone, deleteItem, editItem } from './updateItem.js';
+import { checkItemDone, deleteItem, editItem, addItem, deleteProject } from './crudFunctions.js';
+
 
 
 export function displayProject(projectId) {
@@ -114,10 +115,18 @@ export function displayProject(projectId) {
 
 
 
+    listenBtns(
+        "btn-project.add-item", // class of buttons to be listened to
+        ["projectId"],        // button attribute to identify the button clicked 
+        addItem   // function to be triggered when button clicked
+    );
 
 
-
-
+    listenBtns(
+        "btn-project.delete", // class of buttons to be listened to
+        ["projectId"],        // button attribute to identify the button clicked 
+        deleteProject   // function to be triggered when button clicked
+    );
 
 
 }
