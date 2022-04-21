@@ -1,8 +1,7 @@
 import { loadProjects_from_localStorage } from './controlData.js';
-import { createDiv, createBtn, createChkb, clear_container_content } from './helpers_display.js';
+import { createDiv, createBtn, clear_container_content } from './helpers_display.js';
 import { listenBtns } from './helpers_listen.js';
 import { checkItemDone, deleteItem, editItem, addItem, deleteProject } from './crudFunctions.js';
-
 
 
 export function displayProject(projectId) {
@@ -70,19 +69,18 @@ export function displayProject(projectId) {
             createDiv("", ["div-cell", "date"], [["done", item.done]], item.dueDate, div_itemRow);
             createDiv("", ["div-cell", "priority"], [["data", item.priority], ["done", item.done]], item.priority, div_itemRow);
 
-
             let text_done = (item.done)? "done" : "not done";
             createBtn("", ["btn-item", "done"], [["projectId", projectId], ["itemId", ii]], text_done, div_itemRow);
 
             createBtn("", ["btn-item", "edit"], [["projectId", projectId], ["itemId", ii]], "edit", div_itemRow);
 
             createBtn("", ["btn-item", "delete"], [["projectId", projectId], ["itemId", ii]], "delete", div_itemRow);
-
         }
 
 
-
-
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    // EVENT LISTENERS
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     listenBtns(
         "btn-item.done", // class of buttons to be listened to
         ["projectId", "itemId"],        // button attribute to identify the button clicked 
@@ -112,6 +110,5 @@ export function displayProject(projectId) {
         ["projectId"],        // button attribute to identify the button clicked 
         deleteProject   // function to be triggered when button clicked
     );
-
 
 }

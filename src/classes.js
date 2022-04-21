@@ -1,16 +1,12 @@
-
 export class Project {
     constructor(name, items_array) {
         this.name = name;
         this.items = items_array;
     }
-    
     getName() {
         return this.name;
-    }
-    
+    }    
 }
-
 
 
 export class Item {
@@ -21,7 +17,4 @@ export class Item {
         this.priority = priority;
         this.done = done
     }
-
-
-
 }

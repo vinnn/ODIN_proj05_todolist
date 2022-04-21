@@ -37,7 +37,8 @@ export function displayOverview() {
             const div_projectHead = createDiv("", ["div-project-head"], [[]], "", div_project);
 
                 // projecti name
-                const div_projectName = createDiv("", ["div-project-name", projects[ip].name], [[]], projects[ip].name, div_projectHead);
+                // const div_projectName = createDiv("", ["div-project-name", projects[ip].name], [[]], projects[ip].name, div_projectHead);
+                const div_projectName = createDiv("", ["div-project-name"], [[]], projects[ip].name, div_projectHead);
                 // projecti button select
                 createBtn("", ["btn-project", "select"], [["projectId", ip]], "SELECT", div_projectHead);
                 // projecti button delete
@@ -60,12 +61,9 @@ export function displayOverview() {
             }
     }
 
-
-
-
-
-
-
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    // EVENT LISTENERS
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     listenBtns(
         "btn-project.select", // class of buttons to be listened to
         ["projectId"],        // button attribute name to identify the button clicked 
@@ -77,13 +75,5 @@ export function displayOverview() {
         ["projectId"],        // button attribute name to identify the button clicked 
         deleteProject   // function to be triggered when button clicked
         );
-
-
-
-
-
-
-
-
 
 }

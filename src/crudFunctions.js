@@ -161,7 +161,7 @@ export function newProject() {
     const div_popup = createDiv("div-popup", ["div-popup"], [[]], "NEW PROJECT ", div_content);
 
         const div_name = createDiv("div-name", [], [[]], "name        ", div_popup);
-        const input_name = createInput("input-name", ["input-popup", "name"], [[]], "", "new project name", div_name);
+        const input_name = createInput("input-name", ["input-popup", "name"], [[]], "new project name", "", div_name);
 
         const btn_submit = createBtn("btn-submit", ["btn-submit"], [[], [[]]], "create new project", div_popup);
         const btn_cancel = createBtn("btn-cancel", ["btn-cancel"], [[]], "cancel", div_popup);

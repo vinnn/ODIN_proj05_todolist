@@ -1,6 +1,5 @@
 import { createDiv, createBtn } from './helpers_display.js';
 import { listenBtns } from './helpers_listen.js';
-import { loadOverview } from './index.js';
 import { newProject } from './crudFunctions.js';
 import { displayOverview } from './displayOverview.js';
 
@@ -17,7 +16,6 @@ export function displayHeader() {
     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     createDiv("div-header-title", [], [[]], "TODO LIST", cont_header);
 
-
     // button home
     createBtn("", ["btn-home"], [[]], "HOME", cont_header);
 
@@ -27,7 +25,6 @@ export function displayHeader() {
         displayOverview   // function to be triggered when button clicked
     );
 
-
     // button create new project
     createBtn("", ["btn-new-project"], [[]], "CREATE NEW PROJECT", cont_header);
 
@@ -36,6 +33,5 @@ export function displayHeader() {
         [],        // button attribute to identify the button clicked 
         newProject   // function to be triggered when button clicked
     );
-
 
 }
