@@ -1,0 +1,116 @@
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* STYLES : FOR PROJECT PAGE 
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+#div-project {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 1px solid blue;
+} 
+
+#div-project > .div-project-head {
+    background-color: rgb(252, 252, 196);
+    border: 1px solid blue;
+
+
+    display: grid;
+    grid-template-areas: "btn1 btn1 btn1 btn1 btn1 btn2 btn2";
+    grid-template-columns: 2fr 3fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+
+#div-project  >*> .btn-project {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 3px;
+}
+#div-project  >*> .btn-project.add-item {
+    grid-area: btn1;
+    font-size: 16px;
+    font-weight: 800;
+    color: black;
+    background-color: rgb(204, 204, 243);
+}
+#div-project  >*> .btn-project.delete {
+    grid-area: btn2;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+}
+#div-project >*> .btn-project:hover {
+    color: rgb(252, 252, 196);
+    background-color: black;
+    border: 1px solid green;
+}
+
+
+#div-project >*> .div-item {
+    display: grid;
+    grid-template-areas: "name desc date prio done btn3 btn4";
+    grid-template-columns: 5fr 10fr 2fr 1fr 1fr 1fr 1fr;
+
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+#div-project >*> .div-item > .div-head {
+    padding: 5px;
+    font-weight: 800;
+    border: 1px solid blue;
+}
+#div-project >*> .div-item > .div-cell {
+    padding: 5px;
+    /* font-weight: 800; */
+    border: 1px solid blue;
+}
+
+#div-project >*>*> .div-cell.priority[data="1"][done="false"] {
+    background-color: red;
+}
+#div-project >*>*> .div-cell.priority[data="2"][done="false"] {
+    background-color: orange;
+}
+#div-project >*>*> .div-cell.priority[data="3"][done="false"] {
+    background-color: greenyellow;
+}
+#div-project >*>*> .div-cell[done="true"] {
+    background-color: rgb(219, 217, 217);
+    text-decoration: line-through;
+}
+#div-project >*>*> .div-cell.done {
+    width: 100%;
+}
+#div-project >*>*> .btn-item {
+    font-size: 14px;
+}
+
+
+
+
+
+/* popup form */
+
+#div-popup {
+    display: block;
+    position: fixed;
+    left:30%;
+    top:20%;
+
+    min-width: 40rem;
+    padding: 1rem;
+
+    /* transform: translate(-50%, 5%); */
+    border: 10px solid red;
+    z-index: 9;
+    background-color: rgb(204, 243, 219);
+
+    box-shadow: 10px 10px #888888;
+
+    display: flex;
+    flex-direction: column;
+}
