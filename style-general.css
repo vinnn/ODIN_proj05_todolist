@@ -1,0 +1,103 @@
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* general */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+* {
+    margin: 0;
+	box-sizing: border-box;
+    /* border: 1px solid blue; */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    /* background-image: url("./img/pexels-alexis-ricardo-alaurin-10103568.jpg"); */
+    /* background-size: cover; */
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* nav */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+#divv {
+    color: red;
+} 
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* header */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+#header {
+    height: 5vh;
+    background-color: rgb(235, 252, 196);
+    color: red;
+    font-size: 24px; 
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 2rem;
+    border: 1px solid blue;
+}
+
+.btn-home, .btn-new-project {
+    border: 2px solid blue;
+    border-radius: 0.3rem;
+    font-size: 16px;
+    font-weight: 200;
+    color: black;
+    background-color: rgb(204, 243, 219);
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* content */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+#content {
+
+    height: 90vh; 
+    background-color: rgb(196, 239, 252);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid blue;
+} 
+
+#div-page-title {
+    font-size: 40px;
+    /* font-weight: 800; */
+
+    color: yellow;
+	text-shadow: -1px 1px 0 black,
+				 1px 1px 0 black,
+				 1px -1px 0 black,
+				 -1px -1px 0 black;
+
+    padding: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* footer */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+#footer {
+    height: 5vh;
+    background-color: rgb(235, 252, 196);
+    border: 1px solid blue;
+}
+

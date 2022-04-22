@@ -1,0 +1,104 @@
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* STYLES : FOR OVERVIEW PAGE 
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+#div-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 14px;
+
+} 
+#div-overview > .div-project {
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#div-overview >*> .div-project-head {
+    background-color: rgb(252, 252, 196);
+    border: 1px solid blue;
+
+    display: grid;
+    grid-template-areas: "name name"
+                         "btn1 btn2";
+    grid-template-columns: 3fr 1fr;
+}
+
+#div-overview >*>*> .div-project-name {
+    grid-area: name;
+
+    font-size: 20px;
+    font-weight: 600;
+    margin: 3px;
+}
+
+#div-overview >*>*> .btn-project {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 3px;
+}
+#div-overview >*>*> .btn-project.select {
+    grid-area: btn1;
+    font-size: 16px;
+    font-weight: 800;
+    color: black;
+    background-color: rgb(204, 204, 243);
+}
+#div-overview >*>*> .btn-project.delete {
+    grid-area: btn2;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+}
+
+
+#div-overview >*>*> .btn-project:hover {
+    color: rgb(252, 252, 196);
+    background-color: black;
+    border: 1px solid green;
+}
+
+
+#div-overview >*> .div-project-items {
+    display: flex;
+    flex-direction: column;
+}
+
+#div-overview >*>*> .div-item.row {
+    border: 1px solid blue;
+
+    display: grid;
+    grid-template-areas: "name date priority";
+    grid-template-columns: 4fr 3fr 1fr;
+    padding: 3px;
+} 
+
+
+
+#div-overview >*>*>*> .div-item.name {
+    grid-area: name;
+}
+#div-overview >*>*>*> .div-item.date {
+    grid-area: date;
+}
+#div-overview >*>*>*> .div-item.priority {
+    grid-area: priority;
+    text-align: center;
+}
+#div-overview >*>*>*> .div-item.priority[data="1"] {
+    background-color: red;
+}
+#div-overview >*>*>*> .div-item.priority[data="2"] {
+    background-color: orange;
+}
+#div-overview >*>*>*> .div-item.priority[data="3"] {
+    background-color: greenyellow;
+}
+
+
