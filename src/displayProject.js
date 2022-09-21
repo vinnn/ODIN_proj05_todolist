@@ -37,7 +37,6 @@ export function displayProject(projectId) {
     // items 
     const div_items = createDiv("div-items", ["div-items"], [[]], "", div_project);
 
-
         // items headers
         const div_itemsHead = createDiv("", ["div-item", "head"], [[]], "", div_items);
 
@@ -55,7 +54,6 @@ export function displayProject(projectId) {
             createDiv("", ["div-head"], [[]], "edit", div_itemsHead);
             // header item button delete
             createDiv("", ["div-head"], [[]], "delete", div_itemsHead);
-
 
         // items 
         for (let ii=0; ii<items.length; ii++) {
@@ -112,3 +110,4 @@ export function displayProject(projectId) {
     );
 
 }
+

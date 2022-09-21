@@ -88,7 +88,6 @@ export function editItem(args) {
 }
 
 
-
 export function addItem(args) {
 
     const projects = loadProjects_from_localStorage();

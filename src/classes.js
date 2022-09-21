@@ -8,7 +8,6 @@ export class Project {
     }    
 }
 
-
 export class Item {
     constructor(name, description, dueDate, priority, done) {
         this.name = name;
@@ -18,3 +17,5 @@ export class Item {
         this.done = done
     }
 }
+
+

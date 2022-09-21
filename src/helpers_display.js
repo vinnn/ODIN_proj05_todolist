@@ -1,4 +1,3 @@
-
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // creates an HTML div element
@@ -115,3 +114,5 @@ export function clear_container_content(container) {
         container.removeChild(container.lastChild);
     }
 }
+
+

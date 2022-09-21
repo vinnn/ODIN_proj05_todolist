@@ -3,8 +3,6 @@
 /* STYLES : FOR PROJECT PAGE 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
-
-
 #div-project {
     display: flex;
     flex-direction: column;
@@ -16,11 +14,9 @@
     background-color: rgb(252, 252, 196);
     border: 1px solid blue;
 
-
     display: grid;
     grid-template-areas: "btn1 btn1 btn1 btn1 btn1 btn2 btn2";
     grid-template-columns: 2fr 3fr 1fr 1fr 1fr 1fr 1fr;
-
 }
 
 
@@ -55,7 +51,6 @@
     grid-template-columns: 5fr 10fr 2fr 1fr 1fr 1fr 1fr;
 
     text-align: center;
-    /* border: 1px solid blue; */
 }
 #div-project >*> .div-item > .div-head {
     padding: 5px;
@@ -89,11 +84,7 @@
 }
 
 
-
-
-
 /* popup form */
-
 #div-popup {
     display: block;
     position: fixed;
@@ -103,11 +94,9 @@
     min-width: 40rem;
     padding: 1rem;
 
-    /* transform: translate(-50%, 5%); */
     border: 10px solid red;
     z-index: 9;
     background-color: rgb(204, 243, 219);
-
     box-shadow: 10px 10px #888888;
 
     display: flex;

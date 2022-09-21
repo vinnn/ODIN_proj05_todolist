@@ -3,8 +3,6 @@
 /* STYLES : FOR OVERVIEW PAGE 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
-
-
 #div-overview {
     display: flex;
     flex-wrap: wrap;
@@ -56,13 +54,11 @@
     background-color: red;
 }
 
-
 #div-overview >*>*> .btn-project:hover {
     color: rgb(252, 252, 196);
     background-color: black;
     border: 1px solid green;
 }
-
 
 #div-overview >*> .div-project-items {
     display: flex;

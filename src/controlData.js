@@ -1,7 +1,6 @@
 import jsonData from './data.json';
 import { Project, Item } from './classes.js';
 
-
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // LOAD PROJECTS  FROM JSON FILE  TO  LOCAL STORAGE
@@ -83,8 +82,8 @@ export function updateProjects_in_localStorage(projects) {
 
         projects_dict[project.name] = items_list;
     }
-
     localStorage.clear(); //clean the localstorage
     localStorage.setItem("projects", JSON.stringify(projects_dict));
 
 }
+
